@@ -6,8 +6,8 @@ import br.com.teste.agenda.dto.TelefoneQueryDto;
 
 public interface ITelefoneQueryService {
 
-	List<TelefoneQueryDto> getTelefones( Long idContato);
+	List<TelefoneQueryDto> getTelefones( String idContato);
 	
-	TelefoneQueryDto getTelefone( Long idContato, Long idTelefone);
+	TelefoneQueryDto getTelefone(String id);
 	
 }

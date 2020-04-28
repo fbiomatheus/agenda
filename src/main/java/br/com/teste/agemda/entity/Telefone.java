@@ -1,12 +1,15 @@
-package br.com.teste.agenda.dto;
+package br.com.teste.agemda.entity;
 
-import br.com.teste.agenda.type.TipoTelefoneEnum;
+import org.springframework.data.annotation.Id;
 
-public class TelefoneQueryDto {
-		
+public class Telefone {
+
+	@Id
 	private String id;
-
-	private TipoTelefoneEnum tipoTelefone;
+	
+	private String idContato;
+	
+	private String tipoTelefone;
 	
 	private Integer ddi;
 	
@@ -14,29 +17,29 @@ public class TelefoneQueryDto {
 	
 	private Integer numero;
 	
-	private Integer ramal;	
+	private Integer ramal;
 
-	public TelefoneQueryDto(){
-
-	}
-
-	public TelefoneQueryDto(String idParam){
-		this.id = idParam;
-	}
-	
 	public String getId() {
 		return id;
 	}
 
 	public void setId(String id) {
 		this.id = id;
+	}	
+
+	public String getIdContato() {
+		return idContato;
 	}
 
-	public TipoTelefoneEnum getTipoTelefone() {
+	public void setIdContato(String idContato) {
+		this.idContato = idContato;
+	}
+
+	public String getTipoTelefone() {
 		return tipoTelefone;
 	}
 
-	public void setTipoTelefone(TipoTelefoneEnum tipoTelefone) {
+	public void setTipoTelefone(String tipoTelefone) {
 		this.tipoTelefone = tipoTelefone;
 	}
 
@@ -70,6 +73,9 @@ public class TelefoneQueryDto {
 
 	public void setRamal(Integer ramal) {
 		this.ramal = ramal;
-	}	
-		
+	}
+	
+	
+	
+	
 }

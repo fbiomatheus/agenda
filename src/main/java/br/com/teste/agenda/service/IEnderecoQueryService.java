@@ -7,9 +7,9 @@ import br.com.teste.agenda.dto.EnderecoQueryDto;
 public interface IEnderecoQueryService {
 
 		
-	List<EnderecoQueryDto> getEnderecos(Long idContato);
+	List<EnderecoQueryDto> getEnderecos(String idContato);
 	
-	EnderecoQueryDto getEndereco(Long idContato, Long idEndereco);
+	EnderecoQueryDto getEndereco(String id);
 	
 
 

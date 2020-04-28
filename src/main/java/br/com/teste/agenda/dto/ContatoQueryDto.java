@@ -5,7 +5,7 @@ import java.util.List;
 
 public class ContatoQueryDto{
 
-	private Long id;
+	private String id;
 	
 	private String nome;
 	
@@ -17,12 +17,19 @@ public class ContatoQueryDto{
 	
 	private List<TelefoneQueryDto> telefones;
 	
+	public ContatoQueryDto(String idParam) {
+		this.id = idParam;
+	}
+	
+	public ContatoQueryDto() {		
+	}
+	
 
-	public Long getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 

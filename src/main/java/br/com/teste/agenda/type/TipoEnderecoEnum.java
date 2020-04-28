@@ -1,6 +1,6 @@
 package br.com.teste.agenda.type;
 
-public enum TipoEndereco {
+public enum TipoEnderecoEnum {
 
 	RESIDENCIAL,
 	COMERCIAL,

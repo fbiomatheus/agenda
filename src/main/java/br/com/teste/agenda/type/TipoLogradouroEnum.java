@@ -1,6 +1,6 @@
 package br.com.teste.agenda.type;
 
-public enum TipoLogradouro {
+public enum TipoLogradouroEnum {
 	RUA,
 	AVENIDA,
 	PRACA,

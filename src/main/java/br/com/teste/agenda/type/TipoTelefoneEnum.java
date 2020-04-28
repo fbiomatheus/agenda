@@ -1,6 +1,6 @@
 package br.com.teste.agenda.type;
 
-public enum TipoTelefone {
+public enum TipoTelefoneEnum {
 
 	CASA,
 	TRABALHO,

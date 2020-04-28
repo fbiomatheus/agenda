@@ -1,15 +1,17 @@
-package br.com.teste.agenda.dto;
+package br.com.teste.agemda.entity;
 
-import br.com.teste.agenda.type.TipoEnderecoEnum;
-import br.com.teste.agenda.type.TipoLogradouroEnum;
+import org.springframework.data.annotation.Id;
 
-public class EnderecoQueryDto {
-	
+public class Endereco {
+
+	@Id
 	private String id;
-
-	private TipoEnderecoEnum tipoEndereco;
 	
-	private TipoLogradouroEnum tipoLogradouro;
+	private String idContato;
+	
+	private String tipoEndereco;
+	
+	private String tipoLogradouro;
 	
 	private String numero;
 	
@@ -19,14 +21,7 @@ public class EnderecoQueryDto {
 	
 	private String cidade;
 	
-	private String cep;	
-	
-	public EnderecoQueryDto() {
-	}
-	
-	public EnderecoQueryDto(String idParam) {
-		this.id = idParam;
-	}
+	private String cep;
 
 	public String getId() {
 		return id;
@@ -35,20 +30,28 @@ public class EnderecoQueryDto {
 	public void setId(String id) {
 		this.id = id;
 	}
+	
+	public String getIdContato() {
+		return idContato;
+	}
 
-	public TipoEnderecoEnum getTipoEndereco() {
+	public void setIdContato(String idContato) {
+		this.idContato = idContato;
+	}
+
+	public String getTipoEndereco() {
 		return tipoEndereco;
 	}
 
-	public void setTipoEndereco(TipoEnderecoEnum tipoEndereco) {
+	public void setTipoEndereco(String tipoEndereco) {
 		this.tipoEndereco = tipoEndereco;
 	}
 
-	public TipoLogradouroEnum getTipoLogradouro() {
+	public String getTipoLogradouro() {
 		return tipoLogradouro;
 	}
 
-	public void setTipoLogradouro(TipoLogradouroEnum tipoLogradouro) {
+	public void setTipoLogradouro(String tipoLogradouro) {
 		this.tipoLogradouro = tipoLogradouro;
 	}
 

@@ -6,7 +6,7 @@ import br.com.teste.agenda.dto.ContatoQueryDto;
 
 public interface IContatoQueryService {
 
-	ContatoQueryDto getContato(Long id);
+	ContatoQueryDto getContato(String id);
 	
 	List<ContatoQueryDto> getContatos();
 		

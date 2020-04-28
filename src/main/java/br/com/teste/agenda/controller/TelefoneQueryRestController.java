@@ -24,17 +24,16 @@ public class TelefoneQueryRestController {
 	 @PreAuthorize("hasRole('USER_READ_PRIVILEGE')")
 	 @RequestMapping(value = "/{idContato}", method = RequestMethod.GET)
 	 @ResponseBody
-	 public List<TelefoneQueryDto> getAllTelefones(@PathVariable("idContato") Long idContato) {
+	 public List<TelefoneQueryDto> getAllTelefones(@PathVariable("idContato") String idContato) {
 		 List<TelefoneQueryDto> telefones = telefoneService.getTelefones(idContato);
 		 return telefones;
 	 }	
 	
 	 @PreAuthorize("hasRole('USER_READ_PRIVILEGE')")
-	 @RequestMapping(value = "/{idContato}/{idEndereco}", method = RequestMethod.GET)
+	 @RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	 @ResponseBody
-	 public TelefoneQueryDto getTelefoneById(@PathVariable("idContato") Long idContato,  
-			 @PathVariable("idContato") Long idTelefone) {
-		 TelefoneQueryDto telefone = telefoneService.getTelefone(idContato, idTelefone);
+	 public TelefoneQueryDto getTelefoneById(@PathVariable("id") String id) {
+		 TelefoneQueryDto telefone = telefoneService.getTelefone(id);
 		 return telefone;
 	 }		 
 	 
