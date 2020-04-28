@@ -17,7 +17,7 @@
 <br><br>
 
 <h4>Desejáveis</h4>
-<b>Implementado:</b>
+<b>Implementado:</b><br>
 •	Uso de padrão de projeto CQRS como arquitetura de serviço;<br>
 •	Utilização de Cache;<br>
 •	Utilização de Banco de Dados NOSQL;<br>
