@@ -43,7 +43,7 @@ public class ContatoCommandRestController {
    @PreAuthorize("hasRole('USER_WRITE_PRIVILEGE')")
    @ResponseStatus(HttpStatus.OK)
    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-   public void remover(@PathVariable("id") Long id) {
+   public void remover(@PathVariable("id") String id) {
 
 	   contatoService.remover(id);   
    }	   

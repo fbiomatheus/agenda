@@ -8,6 +8,6 @@ public interface IContatoCommandService {
 	
 	void atualizar(ContatoCommandDto contato);
 	
-	void remover(Long idContato);	
+	void remover(String idContato);	
 	
 }

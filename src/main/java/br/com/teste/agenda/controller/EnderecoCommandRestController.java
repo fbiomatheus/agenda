@@ -42,10 +42,9 @@ public class EnderecoCommandRestController {
    
    @PreAuthorize("hasRole('USER_WRITE_PRIVILEGE')")
    @ResponseStatus(HttpStatus.OK)
-   @RequestMapping(value = "/{idContato}/{idEndereco}", method = RequestMethod.DELETE)
-   public void remover(@PathVariable("idContato") Long idContato, @PathVariable("idEndereco") Long idEndereco) {
-
-	   enderecoService.remover(idContato, idEndereco);   
+   @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+   public void remover(@PathVariable("id") String id) {
+	   enderecoService.remover(id);   
    }	   
    
    

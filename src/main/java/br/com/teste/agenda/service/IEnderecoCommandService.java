@@ -10,7 +10,7 @@ public interface IEnderecoCommandService {
 	
 	void atualizar(EnderecoCommandDto enderecoDto);
 	
-	void remover(Long idContato, Long idEndereco);	
+	void remover(String id);	
 
 	
 }

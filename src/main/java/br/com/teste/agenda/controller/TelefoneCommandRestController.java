@@ -16,7 +16,7 @@ import br.com.teste.agenda.dto.TelefoneCommandDto;
 import br.com.teste.agenda.service.ITelefoneCommandService;
 
 @RestController
-@RequestMapping(value = "/api/contatos")
+@RequestMapping(value = "/api/telefones")
 public class TelefoneCommandRestController {
 
    @Autowired
@@ -42,10 +42,10 @@ public class TelefoneCommandRestController {
    
    @PreAuthorize("hasRole('USER_WRITE_PRIVILEGE')")
    @ResponseStatus(HttpStatus.OK)
-   @RequestMapping(value = "/{idContato}/{idTelefone}", method = RequestMethod.DELETE)
-   public void remover(@PathVariable("idContato") Long idContato, @PathVariable("idTelefone") Long idTelefone) {
+   @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+   public void remover(@PathVariable("id") String id) {
 
-	   telefoneService.remover(idContato, idTelefone);   
+	   telefoneService.remover(id);   
    }	   
       
    

@@ -8,7 +8,7 @@ public interface ITelefoneCommandService {
 	
 	void atualizar(TelefoneCommandDto telefoneDto);
 	
-	void remover(Long idContato, Long idTelefone);
+	void remover(String id);
 	
 
 	
