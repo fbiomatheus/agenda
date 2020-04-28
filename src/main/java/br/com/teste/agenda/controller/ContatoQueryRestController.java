@@ -32,7 +32,7 @@ public class ContatoQueryRestController {
 	 @PreAuthorize("hasRole('USER_READ_PRIVILEGE')")
 	 @RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	 @ResponseBody
-	 public ContatoQueryDto getContatoById(@PathVariable("id") Long id) {
+	 public ContatoQueryDto getContatoById(@PathVariable("id") String id) {
 		 ContatoQueryDto contato = contatoService.getContato(id);
 		 return contato;
 	 }	 

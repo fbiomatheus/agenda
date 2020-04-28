@@ -24,17 +24,16 @@ public class EnderecoQueryRestController {
 	 @PreAuthorize("hasRole('USER_READ_PRIVILEGE')")
 	 @RequestMapping(value = "/{idContato}", method = RequestMethod.GET)
 	 @ResponseBody
-	 public List<EnderecoQueryDto> getAllEnderecos(@PathVariable("idContato") Long idContato) {
+	 public List<EnderecoQueryDto> getAllEnderecos(@PathVariable("idContato") String idContato) {
 		 List<EnderecoQueryDto> enderecos = enderecoService.getEnderecos(idContato);
 		 return enderecos;
 	 }	
 	
 	 @PreAuthorize("hasRole('USER_READ_PRIVILEGE')")
-	 @RequestMapping(value = "/{idContato}/{idEndereco}", method = RequestMethod.GET)
+	 @RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	 @ResponseBody
-	 public EnderecoQueryDto getEnderecoById(@PathVariable("idContato") Long idContato,  
-			 @PathVariable("idContato") Long idEndereco) {
-		 EnderecoQueryDto endereco = enderecoService.getEndereco(idContato, idEndereco);
+	 public EnderecoQueryDto getEnderecoById(@PathVariable("id") String id) {
+		 EnderecoQueryDto endereco = enderecoService.getEndereco(id);
 		 return endereco;
 	 }	 
 	 
