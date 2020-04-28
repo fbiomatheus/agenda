@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-import br.com.teste.agemda.entity.Endereco;
+import br.com.teste.agenda.entity.Endereco;
 
 public interface EnderecoRepository extends MongoRepository<Endereco, String>{	
 

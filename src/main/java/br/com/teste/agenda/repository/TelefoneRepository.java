@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-import br.com.teste.agemda.entity.Telefone;
+import br.com.teste.agenda.entity.Telefone;
 
 public interface TelefoneRepository extends MongoRepository<Telefone, String>{	
 
